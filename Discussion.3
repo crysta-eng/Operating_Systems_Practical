@@ -1,0 +1,5 @@
+Discussion: When would you use a counting semaphore over a mutex?
+
+
+Answer:
+A counting semaphore is used when multiple threads or processes need access to a limited number of identical resources at the same time. For example, if a system has three printers, a counting semaphore initialized to 3 allows up to three threads to use the printers simultaneously while blocking additional threads until one becomes available. It is also useful for managing database connection pools, memory buffers, and network connections. A mutex, on the other hand, is used when only one thread should access a shared resource or critical section at a time, ensuring mutual exclusion and preventing race conditions.
